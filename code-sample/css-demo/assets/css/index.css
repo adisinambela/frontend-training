@@ -1,0 +1,55 @@
+/* h1 {
+    color: red;
+} 
+
+#title2 {
+    background-color: blue;
+}
+
+.bg-grey {
+    background-color: grey;
+} */
+
+h1,
+h2,
+h3 {
+  color: hsl(64, 88%, 54%);
+}
+
+.bg-grey {
+  background-color: grey;
+  color: blue;
+}
+
+#title3 {
+  color: aqua;
+}
+
+p a {
+  background-color: green;
+}
+
+p {
+  font-family: "Lucida Console", monaco, monospace;
+}
+
+#paragraph1 {
+    width: 20em;
+    padding: 20px;
+    border-color: black;
+    border-style: solid;
+    border-width: 20px;
+    margin: 20px
+}
+
+#box-container{
+    display: flex;
+}
+
+#inline-width {
+    display: block;
+    width: 100px;
+    height: 100px;
+    overflow: scroll;
+    border: 1px solid black;
+}
