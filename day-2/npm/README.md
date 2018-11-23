@@ -2,7 +2,7 @@
 
 ---
 
-## NodeJs
+## NodeJs & NPM
 
 ### What is NodeJs
 
@@ -137,20 +137,6 @@ DB_DATABASE=homestead
 DB_USERNAME=homestead
 DB_PASSWORD=secret
 ```
-
----
-
-### Semantic versioning
-
-SemVer is a 3-component system in the format of `x.y.z` where:
-
-1. `x` stands for a major version
-2. `y` stands for a minor version
-3. `z` stands for a patch
-
-A change in patch represents a bugfix that doesn’t break anything. A change in minor version represents a new functionality that doesn’t break anything. A change in major version represents a large change that breaks compatibility. If users don’t adapt to a major version change, stuff won’t work.
-
-Always start at `0.1.0` and before `1.0.0` is only the development phase.
 
 ## References
 

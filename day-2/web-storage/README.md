@@ -1,11 +1,4 @@
-# JavaScript DOM 3
-
----
-
-## Form Processing
-
-* Validation
-* Save data
+# Web Storage
 
 ---
 
@@ -118,6 +111,8 @@ document.cookie = "expires=" + d.toGMTString();
 ```
 
 You can delete a cookie by simply updating its expiration time to zero.
+
+
 
 ## IndexedDB
 
