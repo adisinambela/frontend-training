@@ -15,12 +15,13 @@ Syntax:
 `function name() {}`
 
 ```js
-function myFunction(total_price, name) {
-  total_tax = total_price * 0.1;
+function calculateTax(totalPrice) {
+    tax = totalPrice * 0.1;
 
-  detail_tax = `name: ${name}, tax:${total_tax}`;
-  return detail_tax;
+    return tax;
 }
+
+console.log(calculateTax(50000))
 ```
 
 ### with variable function
@@ -30,12 +31,13 @@ Syntax:
 `const x = function() {}`
 
 ```js
-const myFunction = function(total_price, name) {
-  total_tax = total_price * 0.1;
+const calculateTax = function (totalPrice) {
+    tax = totalPrice * 0.1;
 
-  detail_tax = `name: ${name}, tax:${total_tax}`;
-  return detail_tax;
-};
+    return tax;
+}
+
+console.log(calculateTax(50000))
 ```
 
 ### with arrow function
@@ -45,15 +47,13 @@ Syntax:
 `const x = () => {}`
 
 ```js
-//example 1
-var names = ["Budi", "Joni", "Tono", "Jaka"];
+const calculateTax = (totalPrice) => {
+    tax = totalPrice * 0.1;
 
-var modified_name = names.map(name => "Mr." + name);
+    return tax;
+}
 
-// with function inside var
-var funct = name => "Mr." + name;
-
-var modified_name = names.map(funct);
+console.log(calculateTax(50000))
 ```
 
 ### Recursive function
@@ -78,49 +78,64 @@ factorial(5, 1)
 
 ### **var**
 
-Variables can be re-declared and updated.
+* Variables can be re-declared and updated.
 
 ```js
-var greeter = "hey hi";
-var greeter = "say Hello instead";
+var greeter = "Hello"; // declaration 
+var greeter = "Hi!"; // re-declaration 
+greeter = "Hola!"; // update variable 
 ```
 
-Not block scoped.
+* Not **block scoped**
+
+Scope essentially means where these variables are available for use. A block is chunk of code bounded by {}
 
 ```js
 var b = 2;
 var condition = true;
 if (condition) {
-    var b = 3
+    var b = 3;
 }
-console.log(b) //=> 3
+console.log(b); //=> 3
 ```
 
-var variables are hoisted to the top of its scope and initialized with a value of undefined.
+* Hoisted to the top, undefined by default,
+
+Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
+
+`var` variables are hoisted to the top of its scope and initialized with a value of undefined.
 
 example:
 
 ```js
-x = 10;
-var x;
-console.log(x); //10
+console.log(x);  //=>undefined
+var x = 10;
 ```
-
-or :
 
 ```js
-var x
-x=10
+var x //undefined
+x = 10
 console.log(x) //=> 10
 ```
+
+same as :
+
+```js
+x = 10;
+var x; // undefined and move to top
+console.log(x); //=10
+```
+
+
 
 ### **let**
 
 Can be updated but not redeclared.
 
 ```js
-let greeting = "say Hi";
-greeting = "say Hello instead";
+let greeter = "Hello"; 
+let greeter = "Hi!"; // error 
+greeter = "Hola!";
 ```
 
 Block scoped.
@@ -134,13 +149,20 @@ if (condition) {
 console.log(b) //=> 2
 ```
 
-### **const**
-
-`const` declarations are block scoped, cannot be updated or re-declared.
+Non **Hoisting variable**
 
 ```js
-const greeting = "say Hi";
-const greeting = "say Hello instead"; //error : Identifier 'greeting' has already been declared
+console.log(x);  //=>Error
+let x = 10;
+```
+
+### **const**
+
+`const`  cannot be updated or re-declared.
+
+```js
+const greeting = "Hello";
+const greeting = "Hi"; //error : Identifier 'greeting' has already been declared
 ```
 
 block scoped
@@ -154,9 +176,24 @@ if (condition) {
 console.log(b) //=> 2
 ```
 
+Non **Hoisting variable**
+
+```js
+console.log(x);  //=>Error
+const x = 10;
+```
+
 ---
 
 ## Summary
+
+1. var declarations are globally scoped or function scoped while let and const are block scoped.
+
+1. var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
+
+1. They are all hoisted to the top of their scope but while varvariables are initialized with undefined, let and const variables are not initialized.
+
+1. While var and let can be declared without being initialized, const must be initialized during declaration.
 
 ![](./var-let-const.png)
 
