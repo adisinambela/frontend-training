@@ -36,7 +36,7 @@ let newNumber = numbers.map(function(number) {
 
 [Code Sample](https://codesandbox.io/s/n5x6zkrmrj)
 
-#### `filter`
+#### `filter()`
 
 `filter()` function is used to create a new array from a given array consisting of only those elements from the given array which satisfy a condition set by the argument function
 
