@@ -278,6 +278,8 @@ or with component from another file
   }
 ```
 
+[Code Sample](https://codesandbox.io/s/244wj96o5p)
+
 ### Short Circuit
 
 ```jsx
@@ -292,6 +294,8 @@ render() {
     );
   }
 ```
+
+[Code Sample](https://codesandbox.io/s/jp16mzmor5)
 
 ### If / Else
 
@@ -309,6 +313,8 @@ render() {
   }
 }
 ```
+
+[Code Sample](https://codesandbox.io/s/jp16mzmor5)
 
 ## Handle form with react
 
