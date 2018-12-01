@@ -22,6 +22,8 @@ render() {
   }
 ```
 
+[Sample Code](https://codesandbox.io/s/8nj012yzzj)
+
 * Link : used to generate links to your routes
 
 ```jsx
@@ -34,6 +36,8 @@ return (
       </Router>
     );
 ```
+
+[Code Sample](https://codesandbox.io/s/kkyoqwyk4o)
 
 * Route :  responsible for showing - or hiding - the components they contain.
 
@@ -73,6 +77,8 @@ class App extends Component {
   }
 }
 ```
+
+[Code Sample]()
 
 ## Pass props to child using react router
 
